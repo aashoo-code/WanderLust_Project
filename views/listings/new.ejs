@@ -1,0 +1,52 @@
+<% layout(`/layouts/boilerplate`) -%>
+
+  <h3>Create Your Listing</h3>
+  <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Title</span>
+      <input type="text" name="listing[title]" class="form-control" placeholder="Enter Title" aria-label="title"
+        aria-describedby="basic-addon1" required>
+        <div class="valid-feedback">Title looks good</div>
+    </div>
+
+    <div class="form-floating">
+      <textarea class="form-control" name="listing[description]" placeholder="Write a Description here"
+        id="floatingTextarea" required></textarea>
+      <label for="floatingTextarea">Write Your Description</label>
+      <div class="valid-feedback">Description is good </div>
+
+    </div>
+    <br>
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text">Upload listing image </span>
+      <input type="file" name="listing[image]" class="form-control">
+      required
+    </div> 
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Price</span>
+      <input name="listing[price]" class="form-control" placeholder="Enter Your Price" aria-label="price"
+        aria-describedby="basic-addon1" required>
+        <div class="invalid-feedback">Enter valid Price</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Location</span>
+      <input type="text" name="listing[location]" class="form-control" placeholder="Enter Location"
+        aria-label="location" aria-describedby="basic-addon1" required>
+        <div class="invalid-feedback">Enter valid Location</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Country</span>
+      <input type="text" name="listing[country]" class="form-control" placeholder="Enter Country" aria-label="country"
+        aria-describedby="basic-addon1" required>        
+        <div class="invalid-feedback">Enter valid Country</div>
+    </div>
+
+    <button type="submit" class="btn btn-warning">Add</button>
+
+  </form>
+  </body>

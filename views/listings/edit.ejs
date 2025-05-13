@@ -1,0 +1,60 @@
+
+<% layout(`/layouts/boilerplate`) -%>
+
+<body>
+  <h3>Update Your Listing</h3>
+  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Title</span>
+      <input type="text" name="listing[title]" class="form-control" value="<%= listing.title %>" required>
+      <div class="valid-feedback">Title looks good</div>
+      <div class="invalid-feedback">Enter valid Title</div>
+    </div>
+
+    <div class="form-floating">
+      <textarea class="form-control" name="listing[description]"  id="
+        floatingTextarea" required><%= listing.description %></textarea>
+      <label for="floatingTextarea">Write Your Description</label>
+      <div class="valid-feedback">Title looks good</div>
+      <div class="invalid-feedback">Enter the Valid Description</div>
+    </div>
+    <br>
+
+  <div class="input-group mb-3">
+   Original Listing Image<br>
+      <img src="<%= originalImageUrl %>" height="150px">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Upload New Image</span>
+      <input type="file" name="listing[image]" class="form-control" >
+      <div class="valid-feedback">Image looks good</div>
+      <div class="invalid-feedback">Enter Valid Image path</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Price</span>
+      <input type="number" name="listing[price]" class="form-control" value="<%= listing.price %>" required>
+      <div class="valid-feedback">Title looks good</div>
+      <div class="invalid-feedback">Enter valid Price</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Location</span>
+      <input type="text" name="listing[location]" class="form-control" value="<%= listing.location %>" required>
+      <div class="valid-feedback">Location is Nice</div>
+      <div class="invalid-feedback">Enter valid Location</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Country</span>
+      <input type="text" value="<%= listing.country %>" name="listing[country]" class="form-control" required>
+      <div class="valid-feedback">Country is Nice</div>
+      <div class="invalid-feedback">Enter Valid Country</div>
+    </div>
+
+    <button type="submit" class="btn btn-warning">Submit</button>
+
+  </form>
+</body>
