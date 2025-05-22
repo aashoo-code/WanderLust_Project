@@ -19,10 +19,9 @@
 }
 
 .navbar-nav a:hover{
-    color: #fe424d !important;
-    border: #fe424d none;
-    border-radius: 10px;
-    background-color: rgb(249, 238, 238);
+    transform: scale(1.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px #fe424d;
 }
 
 .navbar-brand{
@@ -95,6 +94,10 @@ object-fit: cover !important;
 .card-img-overlay:hover{
     opacity: 0.2;
     background-color: whitesmoke;
+}
+
+.btns{
+    display: flex;
 }
 
 .show-img{

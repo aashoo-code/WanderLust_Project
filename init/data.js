@@ -47,6 +47,7 @@ const sampleListings = [
     location: "Florence",
     country: "Italy",
   },
+  
   {
     title: "Secluded Treehouse Getaway",
     description:
